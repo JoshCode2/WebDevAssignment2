@@ -27,11 +27,12 @@ export default function StudentForm({
     }
 
     const gradeNumber = Number(grade);
-
-    if (gradeNumber < 9 || gradeNumber > 12) {
-      setErrorMessage("Current grade must be between Grade 9 and Grade 12.");
+    
+    if (gradeNumber < 0 || gradeNumber > 100) {
+      setErrorMessage("Grade must be between 0 and 100.");
       return;
     }
+
 
     const newStudent: Student = {
       id: `S${String(nextStudentNumber).padStart(3, "0")}`,
@@ -106,8 +107,9 @@ export default function StudentForm({
           </label>
           <input
             type="number"
-            min="9"
-            max="12"
+            min="0"
+            max="100"
+            step="0.1"
             value={grade}
             onChange={(event) => setGrade(event.target.value)}
             className="w-full rounded-xl border border-gray-300 p-3 text-black outline-none focus:border-blue-700 focus:ring-2 focus:ring-blue-200"

@@ -28,11 +28,6 @@ export default function Home() {
         Students
       </h2>
 
-      <StudentForm
-        onAddStudent={handleAddStudent}
-        nextStudentNumber={studentList.length + 1}
-      />
-
       {selectedStudent && (
         <div className="mb-6 bg-blue-50 border border-blue-200 rounded-xl px-5 py-3">
           <p className="text-blue-800 text-sm">
@@ -65,6 +60,18 @@ export default function Home() {
           />
         ))}
       </div>
+
+      <h2 className="text-2xl font-bold mb-4 mt-8">
+        Add Student Form
+      </h2>
+      
+      <div className="mt-10">
+        <StudentForm
+          onAddStudent={handleAddStudent}
+          nextStudentNumber={studentList.length + 1}
+        />
+      </div>
+
 
     </main>
   );
