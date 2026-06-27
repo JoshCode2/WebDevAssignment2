@@ -71,8 +71,6 @@ export default function Home() {
           nextStudentNumber={studentList.length + 1}
         />
       </div>
-
-
     </main>
   );
 }
