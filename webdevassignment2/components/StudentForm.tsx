@@ -66,7 +66,7 @@ export default function StudentForm({
       <form onSubmit={handleSubmit} className="mt-6 grid gap-5 md:grid-cols-2">
         <div>
           <label className="mb-2 block text-sm font-semibold text-gray-700">
-            First Name
+            First Name *
           </label>
           <input
             type="text"
@@ -78,7 +78,7 @@ export default function StudentForm({
 
         <div>
           <label className="mb-2 block text-sm font-semibold text-gray-700">
-            Last Name
+            Last Name *
           </label>
           <input
             type="text"
@@ -90,7 +90,7 @@ export default function StudentForm({
 
         <div>
           <label className="mb-2 block text-sm font-semibold text-gray-700">
-            Date of Birth
+            Date of Birth *
           </label>
           <input
             type="date"
@@ -102,7 +102,7 @@ export default function StudentForm({
 
         <div>
           <label className="mb-2 block text-sm font-semibold text-gray-700">
-            Current Grade
+            Current Grade *
           </label>
           <input
             type="number"
@@ -118,7 +118,7 @@ export default function StudentForm({
           type="submit"
           className="rounded-xl bg-blue-900 px-6 py-3 font-semibold text-white transition hover:bg-blue-800 md:col-span-2"
         >
-          Add Student
+          Add New Student
         </button>
       </form>
     </section>
